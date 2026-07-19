@@ -1,4 +1,10 @@
-# radFormatter
+<p align="left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)"  srcset="https://radprogrammer.com/assets/radFormatter/radformatter-logo-reversed.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://radprogrammer.com/assets/radFormatter/radformatter-logo.svg">
+    <img alt="radFormatter Logo" src="assets/radlexer-logo.svg" width="420">
+  </picture>
+</p>
 
 radFormatter is a CST-aware Delphi source code formatter for teams that want
 consistent formatting without rewriting code by hand.
@@ -54,4 +60,3 @@ reproduces the problem.
 This repository is for public product feedback and release tracking. Purchase,
 license, and account support channels will be documented separately as the alpha
 and commercial launch process comes online.
-
