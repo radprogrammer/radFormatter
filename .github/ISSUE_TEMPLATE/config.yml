@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: radFormatter documentation
+    url: https://radprogrammer.com/radFormatter/docs/radFormatter-cli.html
+    about: Read command-line usage, configuration options, profiles, and known limitations.
+  - name: Product overview
+    url: https://radprogrammer.com/radFormatter/
+    about: Learn what radFormatter does and find public product links.
+  - name: Releases
+    url: https://github.com/radprogrammer/radFormatter/releases
+    about: Download published alpha, beta, or release builds when available.

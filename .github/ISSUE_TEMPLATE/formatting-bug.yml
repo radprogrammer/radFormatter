@@ -1,0 +1,107 @@
+name: Formatting problem
+description: Report incorrect formatting, unstable formatting, or unexpected output.
+title: "[Formatting]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping test radFormatter.
+
+        Please reduce proprietary code to a minimal synthetic snippet before posting. The goal is the smallest example that still reproduces the formatting problem.
+
+  - type: input
+    id: version
+    attributes:
+      label: radFormatter version
+      description: Use the version printed by the CLI or shown by the IDE plugin.
+      placeholder: "Example: 2.7.801 Alpha"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where did this happen?
+      options:
+        - CLI
+        - RAD Studio IDE plugin
+        - Both CLI and IDE plugin
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: delphi-version
+    attributes:
+      label: Delphi / RAD Studio version
+      placeholder: "Example: RAD Studio 12 Athens, Delphi 11 Alexandria, Delphi 7"
+    validations:
+      required: true
+
+  - type: input
+    id: profile
+    attributes:
+      label: Profile or config used
+      description: Include the profile name and mention whether a custom JSON config was used.
+      placeholder: "Example: Embarcadero profile with custom config"
+
+  - type: textarea
+    id: input
+    attributes:
+      label: Input code
+      description: Paste the smallest safe-to-share Delphi snippet that reproduces the issue.
+      render: pascal
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual output
+      description: Paste the output produced by radFormatter.
+      render: pascal
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected output
+      description: Show the formatting you expected, or describe the specific part that is wrong.
+      render: pascal
+    validations:
+      required: true
+
+  - type: dropdown
+    id: idempotence
+    attributes:
+      label: Does formatting the output again change it?
+      options:
+        - "No"
+        - "Yes"
+        - I have not checked
+    validations:
+      required: true
+
+  - type: textarea
+    id: conditional-context
+    attributes:
+      label: Conditional compilation context
+      description: List any defines, undefines, platform/compiler settings, or include paths needed to reproduce this.
+      placeholder: "Example: DEBUG defined, MSWINDOWS defined, include path points to .\\Shared"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Add anything else that may help reproduce or understand the issue.
+
+  - type: checkboxes
+    id: shareable
+    attributes:
+      label: Code sharing confirmation
+      options:
+        - label: I have permission to share the code in this report, or I reduced it to a synthetic snippet.
+          required: true

@@ -1,0 +1,96 @@
+name: Crash or failure
+description: Report a crash, hang, install problem, or command that fails unexpectedly.
+title: "[Failure]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for crashes, hangs, installer problems, CLI failures, IDE plugin failures, or unexpected error messages.
+
+        If the failure happens while formatting a specific source file, include a minimal safe-to-share snippet when possible.
+
+  - type: input
+    id: version
+    attributes:
+      label: radFormatter version
+      placeholder: "Example: 2.7.801 Alpha"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Component
+      options:
+        - CLI
+        - RAD Studio IDE plugin
+        - Installer
+        - Licensing
+        - Documentation
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Include Windows version, Delphi/RAD Studio version, and anything relevant about CI or shell environment.
+      placeholder: "Example: Windows 11, RAD Studio 12 Athens, PowerShell 7"
+    validations:
+      required: true
+
+  - type: textarea
+    id: command
+    attributes:
+      label: Command or action
+      description: What did you run or click?
+      placeholder: "Example: radFormatter -check -r -d src -profile Embarcadero"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include the full error message, exit code, stack trace, or IDE message if available.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: List the shortest steps that reproduce the failure.
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: input
+    attributes:
+      label: Minimal input, if relevant
+      description: If a specific source snippet triggers the failure, paste a minimal safe-to-share example.
+      render: pascal
+
+  - type: checkboxes
+    id: sensitive-info
+    attributes:
+      label: Sensitive information check
+      options:
+        - label: I removed license keys, private paths, customer data, and proprietary source that I am not allowed to share.
+          required: true
