@@ -36,9 +36,8 @@ body:
     id: delphi-version
     attributes:
       label: Delphi / RAD Studio version
+      description: Optional -- helpful only if you suspect the problem is version-specific.
       placeholder: "Example: RAD Studio 12 Athens, Delphi 11 Alexandria, Delphi 7"
-    validations:
-      required: true
 
   - type: input
     id: profile
