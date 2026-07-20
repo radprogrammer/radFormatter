@@ -48,6 +48,13 @@ body:
       placeholder: "Example: Embarcadero profile with custom config"
 
   - type: textarea
+    id: config
+    attributes:
+      label: Configuration (JSON)
+      description: The radFormatter configuration in effect. The GUI's "Report Issue" button fills this in automatically; otherwise paste your config JSON here or leave blank.
+      render: json
+
+  - type: textarea
     id: input
     attributes:
       label: Input code
