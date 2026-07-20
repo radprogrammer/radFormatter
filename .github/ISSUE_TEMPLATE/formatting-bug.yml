@@ -43,9 +43,9 @@ body:
   - type: input
     id: profile
     attributes:
-      label: Profile or config used
-      description: Include the profile name and mention whether a custom JSON config was used.
-      placeholder: "Example: Embarcadero profile with custom config"
+      label: Base profile
+      description: Which built-in profile did you start from (Default, Embarcadero, FormatterExe, NoOp)? The exact settings are captured in Configuration above -- this just records the baseline you customized.
+      placeholder: "Example: Embarcadero"
 
   - type: textarea
     id: config
